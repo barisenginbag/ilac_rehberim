@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ilac_rehberim</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-inner">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+
+							<div class="logo">
+								<a href="index.html" style="color: #1A76D1; text-align:center !important; font-weight:bold !important; font-size:x-large">İlaç Rehberim</a>
+							</div>
+
+							<div class="mobile-nav"></div>
+
+						</div>
+						<div class="col-lg-7 col-md-9 col-12">
+
+							<div class="main-menu">
+								<nav class="navigation">
+									<ul class="nav menu">
+										<li class="active">
+											<a asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa<i class="icofont-rounded-down"></i></a>
+										</li>
+@* 										<li>
+											<a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+											<ul class="dropdown">
+												<li><a href="Privacy.html">Blog Details</a></li>
+											</ul>
+										</li> *@
+
+
+										<li><a asp-area="" asp-controller="Home" asp-action="Privacy">İletişim</a></li>
+									</ul>
+								</nav>
+							</div>
+
+						</div>
+						<div class="col-lg-2 col-12">
+							<div class="get-quote">
+								<a href="giris.html" class="btn">Giriş Yap</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<!-- End Header Area -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - ilac_rehberim - <a asp-area="" asp-controller="Home" asp-action="Privacy"></a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
