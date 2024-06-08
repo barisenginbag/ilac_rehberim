@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Kayıt";
+}
+
+<div class="giris">
+    <div class="form">
+        <form asp-controller="User" asp-action="Kayit" method="post">
+            <input type="text" placeholder="Adınız Soyadınız" name="adSoyad" />
+            <input type="text" placeholder="Kullanıcı Adınız" name="kullaniciAdi" />
+            <input type="text" placeholder="Telefon Numaranız" name="telefon" />
+            <input type="email" placeholder="Mail Adresiniz" name="email" />
+            <input type="password" placeholder="Şifreniz" name="sifre" />
+            <button type="submit">Oluştur</button>
+        </form>
+    </div>
+</div>

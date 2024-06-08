@@ -47,6 +47,24 @@
 	<link rel="stylesheet" href="~/css/style.css">
 	<link rel="stylesheet" href="~/css/responsive.css">
 
+	<style>
+		.get-pro {
+			position: absolute;
+			left: -80px;
+			width: 100px;
+			height: 50px;
+			line-height: 45px;
+			font-size: 13px;
+			border-radius: 5px 0 0 5px;
+			background: #1A76D1;
+			text-align: center;
+			color: #fff;
+			top: 0;
+			cursor: pointer;
+			box-shadow: -4px 0px 5px #00000036;
+		}
+	</style>
+
 </head>
 <body>
 
@@ -72,9 +90,10 @@
 		<li>Geçmiş tedavilerin kontolü</li>
 		<li>Karşılaştığınız hastalıkların grafiklerle gösterimi</li>
 		<li>Hepsi İlaç Rehberim Proda</li>
+		<li>Üstelik Şimdilik Ücretsiz!!!</li>
 		<div class="button">
-			<a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" class="btn">Pro Version Demo</a>
-			<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Pro Version a yükselt</a>
+			@* <atarget="_blank" class="btn">Pro Version Demo</a> *@
+			<a target="_blank" class="btn" asp-area="" asp-controller="User" asp-action="Kayit">Pro Version a yükselt</a>
 		</div>
 	</ul>
 
@@ -89,7 +108,7 @@
 								<h1>Güvenebileceğiniz <span>Tıbbi</span> hizmetler <span>sunuyoruz</span></h1>
 								<p>Bu uygulamayı kullanarak, doktorlar hasta verilerini daha etkili bir şekilde analiz edebilir, hızlı bir şekilde ilaç önerileri oluşturabilir ve tedavi planlarınızı kişiselleştirebilirsiniz</p>
 								<div class="button">
-									<a href="#" class="btn">Bizimle iletişime geçin</a>
+									<a href="#" class="btn">Bizimle iletişime geçin</a>	
 									@* <a href="#" class="btn primary">Learn More</a> *@
 								</div>
 							</div>
@@ -432,7 +451,7 @@
 							<li class="cross"><i class="icofont icofont-ui-close"></i>Sağlık kurluşları için hastalarının durumları</li>
 						</ul>
 						<div class="table-bottom">
-							<a class="btn" href="#">Şimdi Katıl</a>
+							<a class="btn" asp-area="" asp-controller="User" asp-action="Kayit">Şimdi Katıl</a>
 						</div>
 
 					</div>
@@ -447,7 +466,7 @@
 							</div>
 							<h4 class="title">Aylık Premium Planlama</h4>
 							<div class="price">
-								<p class="amount">$99</p>
+								<p class="amount" style="font-size:20px">Üstelik Şimdilik Ücretsiz!!!</p>
 							</div>
 						</div>
 
@@ -459,7 +478,7 @@
 							<li class="cross"><i class="icofont icofont-ui-close"></i>Sağlık kurluşları için hastalarının durumları</li>
 						</ul>
 						<div class="table-bottom">
-							<a class="btn" href="#">Şimdi Katıl</a>
+							<a class="btn" asp-area="" asp-controller="User" asp-action="Kayit">Şimdi Katıl</a>
 						</div>
 
 					</div>
@@ -474,7 +493,7 @@
 							</div>
 							<h4 class="title">Yıllık Premium Planlama</h4>
 							<div class="price">
-								<p class="amount">$1099</p>
+								<p class="amount" style="font-size:20px">Üstelik Şimdilik Ücretsiz!!!</p>
 							</div>
 						</div>
 
@@ -486,7 +505,7 @@
 							<li><i class="icofont icofont-ui-check"></i>Sağlık kurluşları için hastalarının durumları</li>
 						</ul>
 						<div class="table-bottom">
-							<a class="btn" href="#">Şimdi Katıl</a>
+							<a class="btn" asp-area="" asp-controller="User" asp-action="Kayit">Şimdi Katıl</a>
 						</div>
 
 					</div>
@@ -516,8 +535,8 @@
 						</div>
 						<div class="news-body">
 							<div class="news-content">
-								<div class="date">--/--/----</div>
-								<h2><a href="blog-single.html">RSV aşısı, bebeklerin hastaneye yatışını 'yüzde 80'den fazla azaltıyor'</a></h2>
+								<div class="date">27/12/2023</div>
+								<h2><a href="https://www.bbc.com/turkce/articles/ck743gme1l3o#:~:text=New%20England%20isimli%20t%C4%B1p%20dergisinde,benzerdi%20ve%20%C3%A7o%C4%9Funlukla%20da%20hafiftiler." target="_blank">RSV aşısı, bebeklerin hastaneye yatışını 'yüzde 80'den fazla azaltıyor'</a></h2>
 								<p class="text">Üç ülkede yapılan araştırma, yaygın ve tehlikeli kış virüsü olan RSV’ye karşı bebekleri korumak için geliştirilen antikorun, hastaneye yatışları yüzde 80’den fazla azalttığını gösterdi.</p>
 							</div>
 						</div>
@@ -532,8 +551,8 @@
 						</div>
 						<div class="news-body">
 							<div class="news-content">
-								<div class="date">--/--/----</div>
-								<h2><a href="blog-single.html">Anastrozol: Meme kanseri riskini yarı yarıya azaltan ilaç İngiltere'de binlerce kadına sunuluyor</a></h2>
+								<div class="date">07/11/2023</div>
+								<h2><a href="https://www.bbc.com/turkce/articles/ckmp04zldl4o#:~:text=Anastrozol%3A%20Meme%20kanseri%20riskini%20yar%C4%B1,%C4%B0ngiltere'de%20binlerce%20kad%C4%B1na%20sunuluyor&text=%C4%B0ngiltere'de%20on%20binlerce%20kad%C4%B1n,%C3%B6nleyici%20bir%20ila%C3%A7%20olarak%20kullan%C4%B1lacak." target="_blank">Anastrozol: Meme kanseri riskini yarı yarıya azaltan ilaç İngiltere'de binlerce kadına sunuluyor</a></h2>
 								<p class="text">İngiltere'de on binlerce kadın meme kanserini önlemeye yardımcı olan bir ilaçtan faydalanabilecek. Hastalığı tedavi etmek için uzun yıllardır kullanılan Anastrozol, artık önleyici bir ilaç olarak kullanılacak.</p>
 							</div>
 						</div>
@@ -548,8 +567,8 @@
 						</div>
 						<div class="news-body">
 							<div class="news-content">
-								<div class="date">--/--/----</div>
-								<h2><a href="blog-single.html">Bilim insanları yapay zekadan umutlu: 'Kanserin derecesini ve agresifliğini daha isabetli belirleyebilir'</a></h2>
+								<div class="date">01/11/2023</div>
+								<h2><a href="https://www.bbc.com/turkce/articles/c3grgdglxgro#:~:text=%C4%B0ngiltere'de%20yap%C4%B1lan%20bir%20ara%C5%9Ft%C4%B1rma,fazla%20ba%C5%9Far%C4%B1l%C4%B1%20oldu%C4%9Funu%20ortaya%20koydu." target="_blank">Bilim insanları yapay zekadan umutlu: 'Kanserin derecesini ve agresifliğini daha isabetli belirleyebilir'</a></h2>
 								<p class="text">İngiltere’de yapılan bir araştırma, nadir görülen bir kanser türü olan retroperitoneal sarkomun agresiflik derecesini belirlemekte, yapay zekanın mevcut yöntemlere göre yaklaşık iki kat fazla başarılı olduğunu ortaya koydu.</p>
 							</div>
 						</div>

@@ -1,13 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ilac_rehberim
 {
@@ -24,6 +20,9 @@ namespace ilac_rehberim
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // Session kullanýmýný etkinleþtir
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +44,9 @@ namespace ilac_rehberim
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // Session middleware'ini ekleyin
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

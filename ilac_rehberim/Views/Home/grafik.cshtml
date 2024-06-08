@@ -1,0 +1,1439 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #chart-container {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container1 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container2 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container3 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container4 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container5 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container6 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container7 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #chart-container8 {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    
+    <div id="wrapper">
+
+        
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-area="" asp-controller="Home" asp-action="Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">İlaç Rehberim </div>
+            </a>
+
+            
+            <hr class="sidebar-divider my-0">
+
+            
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="HomePage">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Panel</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-0">
+
+            
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Sorgu">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Sorgu</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-0">
+
+
+            
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="grafik">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Grafikler</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Not">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Notlar</span>
+                </a>
+            </li>
+
+            
+            <hr class="sidebar-divider d-none d-md-block">
+
+            
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        
+        
+
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            
+            <div id="content">
+
+                
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Arama yap..."
+                                   aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    
+                    <ul class="navbar-nav ml-auto">
+
+                        
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                               placeholder="Search for..." aria-label="Search"
+                                               aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alarm Merkezi
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Mayıs 7, 2024</div>
+                                        <span class="font-weight-bold">Öncelikli Uyarı: "Acil! Yüksek ateş ve şiddetli baş ağrısı olan hastanın durumu kontrol altına alınmalıdır."</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Mayıs 8, 2024</div>
+                                        Dikkat Edilmesi Gereken Durum: "Kritik ilaç stoğu uyarısı: Antibiyotiklerin stok seviyesi kritik seviyeye düştü, yeniden sipariş verilmelidir."
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Mayız 9, 2024</div>
+                                        Önemli Bilgi: "Kullanılan ilaçlara bağlı olası yan etkilerin rapor edilmesi gerekmektedir. Hastaların yan etkileri düzenli olarak takip edilmelidir."
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Mesaj Merkezi
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">
+                                            Randevu Onayı: "Lütfen belirtilen saatte muayene için hazır bulununuz."
+                                        </div>
+                                        <div class="small text-gray-500">Hastane Yönetimi</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                             alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            "Merhaba [Doktor Adı], [Hasta Adı]'nın tedavi planında güncelleme yapılmıştır. Detaylar için hasta dosyasını kontrol ediniz."
+                                        </div>
+                                        <div class="small text-gray-500">Hastane Yönetimi</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            "Doktorlar Toplantısı Hatırlatması: Yarın saat [Saat] için toplantı planlanmıştır. Lütfen katılımınızı sağlayınız."
+                                        </div>
+                                        <div class="small text-gray-500">Hastane Yönetimi</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            "Dikkatinize: Yeni bir hasta kaydı yapılmıştır. [Hasta Adı] hakkında detaylı bilgiyi hasta dosyasında bulabilirsiniz."
+                                        </div>
+                                        <div class="small text-gray-500">Hastane Yönetimi</div>
+                                    </div>
+                                </a>
+                                @*<a class="dropdown-item text-center small text-gray-500" href="#">Daha Fazla Mesaj</a> *@
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline small" style="color: blue;font-weight: bold;font-size: unset;">@ViewBag.UserName</span>
+                            </a>
+
+                            
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="userDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Settings">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profilim
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Çıkış
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+
+                </nav>
+
+                <div class="card">
+                    <h2 style="font-weight: bold;font-size: 26px;text-align: center;color: #4e73df;">
+                        Önemli Bilgilendirme !!!
+                    </h2>
+                    <p style="color: rebeccapurple;font-weight: bold;font-size: 13px;">
+                        Bu grafikte yer alan veriler, Türkiye İstatistik Kurumu (TÜİK) tarafından sağlanan gerçek verilere dayanmaktadır.
+                        Kullanılan veriler güvenilir kaynaklardan alınmış olup, analizler ve sonuçlar bilimsel yöntemlerle titizlikle hazırlanmıştır.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Yıllara Göre Dünya Genelinde Diyabet Prevalansı</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <div id="chart-container2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Bireylerin başlıca hastalık/sağlık sorunlarının dağılımı, 2016-2022</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Kadınların vücut kitle indeksi dağılımı, 2008-2022, [15+ yaş]</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Erkeklerin vücut kitle indeksi dağılımı, 2008-2022, [15+ yaş]</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Bireylerin tütün mamulü kullanma durumu, 2010-2022, [15+ yaş]</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Türkiye'deki aylık grip görülme sıklığı, [2023]</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <div id="chart-container8"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Hastanede yataklı tedavi hizmeti alan bireylerin cinsiyete göre dağılımı, 2012-2022, [15+ yaş]</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container7"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Tedavi Edilen Hastalara Genel Bakış</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <div id="chart-container1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">En Sık Rastlanan Rahatsızlıklar</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="chart-pie pt-2 pb-1">
+                                    <div id="chart-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>İlaç Rehberim &copy; 2024</span>
+                        </div>
+                    </div>
+                </footer>
+                
+
+            </div>
+            
+        </div>
+        
+        
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ayrılmaya Hazır Mısınız?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Çıkış yapıyorsunuz emin misiniz !!!!</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        
+        <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        
+        <script src="~/js/sb-admin-2.min.js"></script>
+
+        
+        <script src="~/vendor/chart.js/Chart.min.js"></script>
+
+        
+        <script src="~/js/demo/chart-area-demo.js"></script>
+        <script src="~/js/demo/chart-pie-demo.js"></script>
+        <script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+        <script>
+            var dom = document.getElementById('chart-container');
+            var myChart = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            option = {
+                tooltip: {
+                    trigger: 'item'
+                },
+                legend: {
+                    top: '-2%',
+                    left: 'center',
+                    fontSize: 7,
+                    fontWeight: 'bold'
+                },
+                series: [
+                    {
+                        name: 'Access From',
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: 20,
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 31.8, name: 'Tansiyon' },
+                            { value: 26, name: 'Kalp' },
+                            { value: 15.9, name: 'Kanser' },
+                            { value: 13, name: 'Nefes Darlığı' },
+                            { value: 10.6, name: 'Kolestrol' },
+                            { value: 10.6, name: 'Kireçlenme' },
+                            { value: 9.1, name: 'Bel fıtığı-siyatik' },
+                            { value: 7.6, name: 'Ülser-Gastrit' }
+                        ]
+                    }
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart.resize);
+
+
+            var dom1 = document.getElementById('chart-container1');
+            var myChart1 = echarts.init(dom1, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#6a7985'
+                        }
+                    }
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['Antibiyotik', 'Ağrı Kesici', 'Kanser İlacı', 'Kolesterol İlacı', 'Tansiyon İlacı']
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: 'Antibiyotik',
+                        type: 'line',
+                        stack: 'Total',
+                        areaStyle: {},
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [120, 132, 101, 134, 90, 230, 210] // Antibiyotik ilacının reçete edilme sayıları
+                    },
+                    {
+                        name: 'Ağrı Kesici',
+                        type: 'line',
+                        stack: 'Total',
+                        areaStyle: {},
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [220, 182, 191, 234, 290, 330, 310] // Ağrı kesici ilacının reçete edilme sayıları
+                    },
+                    {
+                        name: 'Kanser İlacı',
+                        type: 'line',
+                        stack: 'Total',
+                        areaStyle: {},
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [150, 232, 201, 154, 190, 330, 410] // Kanser ilacının reçete edilme sayıları
+                    },
+                    {
+                        name: 'Kolesterol İlacı',
+                        type: 'line',
+                        stack: 'Total',
+                        areaStyle: {},
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [320, 332, 301, 334, 390, 330, 320] // Kolesterol ilacının reçete edilme sayıları
+                    },
+                    {
+                        name: 'Tansiyon İlacı',
+                        type: 'line',
+                        stack: 'Total',
+                        label: {
+                            show: true,
+                            position: 'top'
+                        },
+                        areaStyle: {},
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [820, 932, 901, 934, 1290, 1330, 1320] // Tansiyon ilacının reçete edilme sayıları
+                    }
+
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart1.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart1.resize);
+
+            var dom = document.getElementById('chart-container2');
+            var myChart2 = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            // Gerçekçi veri seti - Dünya genelinde diyabet prevalansı (milyon kişi)
+            let base = +new Date(2015, 0, 1);
+            let oneYear = 365 * 24 * 3600 * 1000; // Yıllık veri
+            let date = [];
+            let data = [
+                415, // 2015
+                425, // 2017
+                463, // 2019
+                537, // 2021
+                552  // 2022
+            ];
+
+            // Tarihleri oluşturma
+            for (let i = 0; i < 5; i++) {
+                var now = new Date((base += (i === 0 ? 0 : oneYear * (i < 3 ? 2 : 2))));
+                date.push(now.getFullYear());
+            }
+
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    position: function (pt) {
+                        return [pt[0], '10%'];
+                    }
+                },
+                toolbox: {
+                    feature: {
+                        dataZoom: {
+                            yAxisIndex: 'none'
+                        },
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: date
+                },
+                yAxis: {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    name: 'Milyon Kişi'
+                },
+                dataZoom: [
+                    {
+                        type: 'inside',
+                        start: 0,
+                        end: 100
+                    },
+                    {
+                        start: 0,
+                        end: 100
+                    }
+                ],
+                series: [
+                    {
+                        name: 'Diyabet Prevalansı',
+                        type: 'line',
+                        symbol: 'none',
+                        sampling: 'lttb',
+                        itemStyle: {
+                            color: 'rgb(255, 70, 131)'
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                {
+                                    offset: 0,
+                                    color: 'rgb(255, 158, 68)'
+                                },
+                                {
+                                    offset: 1,
+                                    color: 'rgb(255, 70, 131)'
+                                }
+                            ])
+                        },
+                        data: data
+                    }
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart2.setOption(option);
+            }
+
+
+            window.addEventListener('resize', myChart2.resize);
+
+            var dom = document.getElementById('chart-container3');
+            var myChart3 = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            const posList = [
+                'left',
+                'right',
+                'top',
+                'bottom',
+                'inside',
+                'insideTop',
+                'insideLeft',
+                'insideRight',
+                'insideBottom',
+                'insideTopLeft',
+                'insideTopRight',
+                'insideBottomLeft',
+                'insideBottomRight'
+            ];
+            app.configParameters = {
+                rotate: {
+                    min: -90,
+                    max: 90
+                },
+                align: {
+                    options: {
+                        left: 'left',
+                        center: 'center',
+                        right: 'right'
+                    }
+                },
+                verticalAlign: {
+                    options: {
+                        top: 'top',
+                        middle: 'middle',
+                        bottom: 'bottom'
+                    }
+                },
+                position: {
+                    options: posList.reduce(function (map, pos) {
+                        map[pos] = pos;
+                        return map;
+                    }, {})
+                },
+                distance: {
+                    min: 0,
+                    max: 100
+                }
+            };
+            app.config = {
+                rotate: 90,
+                align: 'left',
+                verticalAlign: 'middle',
+                position: 'insideBottom',
+                distance: 15,
+                onChange: function () {
+                    const labelOption = {
+                        rotate: app.config.rotate,
+                        align: app.config.align,
+                        verticalAlign: app.config.verticalAlign,
+                        position: app.config.position,
+                        distance: app.config.distance
+                    };
+                    myChart.setOption({
+                        series: [
+                            {
+                                label: labelOption
+                            },
+                            {
+                                label: labelOption
+                            },
+                            {
+                                label: labelOption
+                            },
+                            {
+                                label: labelOption
+                            }
+                        ]
+                    });
+                }
+            };
+            const labelOption = {
+                show: true,
+                position: app.config.position,
+                distance: app.config.distance,
+                align: app.config.align,
+                verticalAlign: app.config.verticalAlign,
+                rotate: app.config.rotate,
+                formatter: '{c}  {name|{a}}',
+                fontSize: 16,
+                rich: {
+                    name: {}
+                }
+            };
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {
+                    data: ['2016', '2019', '2022']
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        mark: { show: true },
+                        dataView: { show: true, readOnly: false },
+                        magicType: { show: true, type: ['line', 'bar', 'stack'] },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        axisTick: { show: false },
+                        data: ['Bel Bölgesi Problemi', 'Boyun Belgesi Problemi', 'Hipertansiyon', 'Şeker Hastalığı', 'Alerji']
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: '2016',
+                        type: 'bar',
+                        barGap: 0,
+                        label: labelOption,
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [27.1, 18.1, 15.8, 9.1, 10.8]
+                    },
+                    {
+                        name: '2019',
+                        type: 'bar',
+                        label: labelOption,
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [29.7, 20.5, 16.4, 10.2, 12.3]
+                    },
+                    {
+                        name: '2022',
+                        type: 'bar',
+                        label: labelOption,
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [24.6, 17.2, 16.1, 11.4, 9.6]
+                    },
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart3.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart3.resize);
+
+            var dom = document.getElementById('chart-container4');
+            var myChart4 = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['Düşük Kilolu', 'Normal Kilolu', 'Obez Öncesi', 'Obez']
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2008', '2014', '2019', '2022']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name: 'Düşük Kilolu',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [5.9, 5.5, 4.9, 4.9]
+                    },
+                    {
+                        name: 'Normal Kilolu',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [48.2, 40.7, 40, 40.6]
+                    },
+                    {
+                        name: 'Obez Öncesi',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [27.4, 29.3, 30.4, 30.9]
+                    },
+                    {
+                        name: 'Obez',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [18.5, 24.5, 24.8, 23.6]
+                    }
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart4.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart4.resize);
+
+            var dom = document.getElementById('chart-container5');
+            var myChart5 = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['Düşük Kilolu', 'Normal Kilolu', 'Obez Öncesi', 'Obez']
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2008', '2014', '2019', '2022']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name: 'Düşük Kilolu',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [2.7, 2.8, 2.7, 2.3]
+                    },
+                    {
+                        name: 'Normal Kilolu',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [48.1, 43.7, 40.3, 40.6]
+                    },
+                    {
+                        name: 'Obez Öncesi',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [36.9, 38.2, 39.7, 40.4]
+                    },
+                    {
+                        name: 'Obez',
+                        type: 'line',
+                        stack: 'Total',
+                        data: [12.2, 15.3, 17.3, 16.8]
+                    }
+                ]
+            };
+
+            if (option && typeof option === 'object') {
+                myChart5.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart5.resize);
+
+            var dom = document.getElementById('chart-container6');
+            var myChart6 = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app = {};
+
+            var option;
+
+            // Güncellenmiş veri seti
+            const rawData = [
+                [25.4, 23.2, 27.3, 26.5, 28.0, 28.3], // Her Gün Kullanan
+                [4.1, 3.6, 5.2, 4.1, 3.4, 3.8],       // Ara Sıra Kullanan
+                [17.1, 14.3, 17.7, 12.9, 14.2, 8.8],  // Daha Önce Kullanan
+                [53.4, 59.0, 49.8, 56.5, 54.5, 59.2]  // Hiç Kullanmayan
+            ];
+
+            const totalData = [];
+            for (let i = 0; i < rawData[0].length; ++i) {
+                let sum = 0;
+                for (let j = 0; j < rawData.length; ++j) {
+                    sum += rawData[j][i];
+                }
+                totalData.push(sum);
+            }
+
+            const grid = {
+                left: 100,
+                right: 100,
+                top: 50,
+                bottom: 50
+            };
+
+            const series = [
+                'Her Gün Kullanan',
+                'Ara Sıra Kullanan',
+                'Daha Önce Kulanan',
+                'Hiç Kullanmayan',
+            ].map((name, sid) => {
+                return {
+                    name,
+                    type: 'bar',
+                    stack: 'total',
+                    barWidth: '60%',
+                    label: {
+                        show: true,
+                        formatter: (params) => Math.round(params.value * 1000) / 10 + '%'
+                    },
+                    data: rawData[sid].map((d, did) =>
+                        totalData[did] <= 0 ? 0 : d / totalData[did]
+                    )
+                };
+            });
+
+            option = {
+                legend: {
+                    selectedMode: false
+                },
+                grid,
+                yAxis: {
+                    type: 'value'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['2010', '2012', '2014', '2016', '2019', '2022']
+                },
+                series
+            };
+
+            if (option && typeof option === 'object') {
+                myChart6.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart6.resize);
+
+        </script>
+
+        <script>
+
+
+            var dom7 = document.getElementById('chart-container7');
+            var myChart7 = echarts.init(dom7, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            var app7 = {};
+
+            var option7;
+
+            const posList7 = [
+                'left', 'right', 'top', 'bottom', 'inside', 'insideTop', 'insideLeft', 'insideRight', 'insideBottom',
+                'insideTopLeft', 'insideTopRight', 'insideBottomLeft', 'insideBottomRight'
+            ];
+
+            app7.configParameters = {
+                rotate: { min: -90, max: 90 },
+                align: { options: { left: 'left', center: 'center', right: 'right' } },
+                verticalAlign: { options: { top: 'top', middle: 'middle', bottom: 'bottom' } },
+                position: {
+                    options: posList7.reduce(function (map, pos) {
+                        map[pos] = pos;
+                        return map;
+                    }, {})
+                },
+                distance: { min: 0, max: 100 }
+            };
+
+            app7.config = {
+                rotate: 90,
+                align: 'left',
+                verticalAlign: 'middle',
+                position: 'insideBottom',
+                distance: 15,
+                onChange: function () {
+                    const labelOption7 = {
+                        rotate: app7.config.rotate,
+                        align: app7.config.align,
+                        verticalAlign: app7.config.verticalAlign,
+                        position: app7.config.position,
+                        distance: app7.config.distance
+                    };
+                    myChart7.setOption({
+                        series: [
+                            { label: labelOption7 },
+                            { label: labelOption7 },
+                            { label: labelOption7 },
+                            { label: labelOption7 }
+                        ]
+                    });
+                }
+            };
+
+            const labelOption7 = {
+                show: true,
+                position: app7.config.position,
+                distance: app7.config.distance,
+                align: app7.config.align,
+                verticalAlign: app7.config.verticalAlign,
+                rotate: app7.config.rotate,
+                formatter: '{c}  {name|{a}}',
+                fontSize: 16,
+                rich: { name: {} }
+            };
+
+            option7 = {
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                legend: { data: ['2012', '2014', '2016', '2019', '2022'] },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        mark: { show: true },
+                        dataView: { show: true, readOnly: false },
+                        magicType: { show: true, type: ['line', 'bar', 'stack'] },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                xAxis: [{ type: 'category', axisTick: { show: false }, data: ['Toplam', 'Erkek', 'Kadın'] }],
+                yAxis: [{ type: 'value' }],
+                series: [
+                    { name: 'Toplam', type: 'bar', barGap: 0, label: labelOption7, emphasis: { focus: 'series' }, data: [8.9, 11.6, 11.3, 10.8, 9.7] },
+                    { name: 'Erkek', type: 'bar', label: labelOption7, emphasis: { focus: 'series' }, data: [7.0, 10.1, 9.5, 9.2, 8.7] },
+                    { name: 'Kadın', type: 'bar', label: labelOption7, emphasis: { focus: 'series' }, data: [10.7, 13.1, 13.1, 12.3, 10.7] }
+                ]
+            };
+
+            if (option7 && typeof option7 === 'object') {
+                myChart7.setOption(option7);
+            }
+
+            window.addEventListener('resize', myChart7.resize);
+
+
+
+            // Belirli bir HTML öğesini seç
+            var dom1 = document.getElementById('chart-container8');
+
+            // Seçilen öğe üzerinde bir ECharts grafiği oluştur
+            var myChart8 = echarts.init(dom1, null, {
+                renderer: 'canvas', // Grafik render türü
+                useDirtyRect: false // Kirli bölge kullanımı
+            });
+
+            // İhtiyaca göre kullanılacak bir uygulama nesnesi
+            var app = {};
+
+            // Grafik seçeneklerini içeren bir değişken
+            var option;
+
+            // Grafik seçeneklerini tanımla
+            option = {
+                // İpucu ayarları
+                tooltip: {
+                    trigger: 'axis', // Etkileşim tetikleyici
+                    axisPointer: {
+                        type: 'cross', // Eksen işaretçi tipi
+                        label: {
+                            backgroundColor: '#6a7985' // İpucu etiketi arka plan rengi
+                        }
+                    }
+                },
+                // Araç kutusu seçenekleri
+                toolbox: {
+                    feature: {
+                        saveAsImage: {} // Resim olarak kaydetme seçeneği
+                    }
+                },
+                // Izgara ayarları
+                grid: {
+                    left: '3%', // Sol boşluk
+                    right: '4%', // Sağ boşluk
+                    containLabel: true // Etiketlerin sığdırılması
+                },
+                // X eksenini tanımla
+                xAxis: [{
+                    type: 'category', // Kategori tipi
+                    boundaryGap: false, // Kenar boşluğu
+                    data: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'] // Ay isimleri
+                }],
+                // Y eksenini tanımla
+                yAxis: [{
+                    type: 'value' // Değer tipi
+                }],
+                // Seriyi tanımla (veri)
+                series: [{
+                    name: 'İnfluenza Vakaları', // Seri adı
+                    type: 'line', // Çizgi grafiği tipi
+                    stack: 'Toplam', // Yığılmış olacak serilerin adı
+                    areaStyle: {}, // Alan stili
+                    emphasis: {
+                        focus: 'series' // Vurgu odak noktası
+                    },
+                    // Ay bazında influenza vakaları
+                    data: [1250, 1100, 800, 600, 450, 300, 150, 100, 200, 500, 900, 1200]
+                }]
+            };
+
+            // Seçenekler tanımlandıysa, grafik seçeneklerini ayarla
+            if (option && typeof option === 'object') {
+                myChart8.setOption(option);
+            }
+
+            // Pencerenin boyutu değiştiğinde grafik boyutunu yeniden ayarla
+            window.addEventListener('resize', myChart8.resize);
+
+
+
+        </script>
+
+</body>
+
+</html>
+

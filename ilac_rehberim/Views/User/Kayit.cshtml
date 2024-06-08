@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewData["Title"] = "Kayıt";
+}
+
+<link rel="icon" href="img/favicon.png">
+
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="~/css/nice-select.css">
+
+<link rel="stylesheet" href="~/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="~/css/icofont.css">
+
+<link rel="stylesheet" href="~/css/slicknav.min.css">
+
+<link rel="stylesheet" href="~/css/owl-carousel.css">
+
+<link rel="stylesheet" href="~/css/datepicker.css">
+
+<link rel="stylesheet" href="~/css/animate.min.css">
+
+<link rel="stylesheet" href="~/css/magnific-popup.css">
+
+
+<link rel="stylesheet" href="~/css/normalize.css">
+<link rel="stylesheet" href="~/css/Giris.css">
+<link rel="stylesheet" href="~/css/responsive.css">
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary" style="background-image: url('/img/arka.jpg');">
+
+    <div class="container">
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-1">
+                    <div class="card-body p-0">
+
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="~/img/about-img.jpg" alt="#">
+                                <img src="~/img/blog1.jpg" alt="#">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Hoşgeldiniz!</h1>
+                                    </div>
+                                    <div class="giris">
+                                        <div class="form">
+                                            <form action="/User/Kayit" method="post">
+                                                <input type="text" placeholder="Adınız Soyadınız" name="adSoyad" />
+                                                <input type="text" placeholder="Kullanıcı Adınız" name="kullaniciAdi" />
+                                                <input type="text" placeholder="Telefon Numaranız" name="telefon" />
+                                                <input type="email" placeholder="Mail Adresiniz" name="email" />
+                                                <input type="password" placeholder="Şifreniz" name="sifre" />
+                                                <button type="submit" style="background: dodgerblue;">Oluştur</button>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <script src="~/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+<script>
+    $('.mesaj a').click(function () {
+        $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+</script>
+
+
+
+
+
+
+<script>
+    $('.mesaj a').click(function () {
+        $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+</script>
